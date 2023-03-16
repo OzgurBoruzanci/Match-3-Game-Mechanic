@@ -3,29 +3,42 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sphere : ObjectProperties
+public class Sphere : BaseObject
 {
-    ObjectProperties objectProperties;
-    Vector3 firstPosition;
-    bool clicked = false;
-    void Start()
+    bool onClick = false;
+    bool secondObjectOnClick = false;
+    private void Start()
     {
-        firstPosition = transform.position;
-        objectProperties = new ObjectProperties();
+        derivedObject = transform.gameObject;
+        firstPosition =transform.position;
     }
-    
-    
-    void Update()
+    private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && !clicked)
+        if (Input.GetMouseButtonDown(0))
         {
-            objectProperties.ClicktTheObjectFirst();
-            clicked = true;
-        }
-        if (Input.GetMouseButtonDown(0) && clicked)
-        {
-            objectProperties.ClicktTheObjectSecond(firstPosition);
-            clicked = false;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit))
+            {
+                derivedObject = hit.transform.gameObject;
+                if (!onClick && !secondObjectOnClick)
+                {
+                    ObjectFirstClick();
+                    onClick = true;
+                    secondObjectOnClick = true;
+                }
+                else if (onClick && !secondObjectOnClick)
+                {
+                    ObjectLastClick();
+                    onClick = false;
+                }
+                if (secondObjectOnClick && onClick)
+                {
+                    SecondObjectClick();
+                    onClick = false;
+                    secondObjectOnClick = false;
+                }
+            }
         }
     }
 }
