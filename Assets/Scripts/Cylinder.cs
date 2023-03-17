@@ -1,11 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 public class Cylinder : BaseObject
 {
     bool onClick = false;
-    bool secondObjectOnClick=false;
+
+    private void OnEnable()
+    {
+        EventManager.OnClick += OnClick;
+        EventManager.Matched += Matched;
+        //EventManager.LeftObject += LeftObject;
+        //EventManager.RightObject += RightObject;
+    }
+    private void OnDisable()
+    {
+        EventManager.OnClick -= OnClick;
+        EventManager.Matched -= Matched;
+        //EventManager.LeftObject -= LeftObject;
+        //EventManager.RightObject -= RightObject;
+    }
+
+    //void LeftObject(GameObject leftObject)
+    //{
+
+    //}
+    //void RightObject(GameObject rightObject)
+    //{
+
+    //}
+
+    void Matched()
+    {
+        transform.gameObject.SetActive(false);
+    }
+
+    void OnClick()
+    {
+        onClick = true;
+    }
+
     private void Start()
     {
         derivedObject = transform.gameObject;
@@ -20,22 +55,21 @@ public class Cylinder : BaseObject
             if (Physics.Raycast(ray, out hit))
             {
                 derivedObject = hit.transform.gameObject;
-                if (!onClick && !secondObjectOnClick)
+                if (!onClick && hit.transform.gameObject!=null)
                 {
                     ObjectFirstClick();
-                    onClick = true;
-                    //secondObjectOnClick= true;
+                    EventManager.OnClick();
+                    EventManager.LeftObject(transform.GetComponent<MeshFilter>().mesh, transform.GetComponent<Renderer>().material.color);
                 }
-                else if (onClick && !secondObjectOnClick)
+                else if (onClick && hit.transform.gameObject==transform.gameObject)
                 {
                     ObjectLastClick();
-                    onClick = false;
+                    onClick= false;
                 }
-                if (secondObjectOnClick && onClick)
+                if (!onClick && hit.transform.gameObject != null && hit.transform.tag == "CloneObject")
                 {
                     SecondObjectClick();
-                    onClick = false;
-                    secondObjectOnClick= false;
+                    EventManager.RightObject(transform.GetComponent<MeshFilter>().mesh,transform.GetComponent<Renderer>().material.color);
                 }
             }
         }

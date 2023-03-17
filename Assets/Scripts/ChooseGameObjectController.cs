@@ -11,16 +11,25 @@ public class ChooseGameObjectController : MonoBehaviour
     public ObjectType objectThree;
     public ObjectType objectFour;
 
+    public enum ObjectPoint { five,ten,fifteen,twenty};
+    public ObjectPoint objecPointOne;
+    public ObjectPoint objecPointTwo;
+    public ObjectPoint objecPointThree;
+    public ObjectPoint objecPointFour;
+
     public enum ObjectColor { black, blue, gray, green, red, white, yellow };
     public ObjectColor objectColorOne;
     public ObjectColor objectColorTwo;
     public ObjectColor objectColorThree;
     public ObjectColor objectColorFour;
+
     List<GameObject> createdObjects;
     GameObject createdObjectOne;
     GameObject createdObjectTwo;
     GameObject createdObjectThree;
     GameObject createdObjectFour;
+
+    GameObject createdObjecClone;
 
     float distance = 0;
     void Start()
@@ -28,6 +37,7 @@ public class ChooseGameObjectController : MonoBehaviour
         createdObjects = new List<GameObject>();
         ObjectTypeChoiceAndCreate();
         ObjectColorChoice();
+        ObjectPointChoice();
         for (int i = 0; i < createdObjects.Count; i++)
         {
             createdObjects[i].transform.position = new Vector3(-4 + distance, 4, 0);
@@ -37,7 +47,8 @@ public class ChooseGameObjectController : MonoBehaviour
         createdObjects.Reverse();
         for (int i = 0; i < createdObjects.Count; i++)
         {
-            Instantiate(createdObjects[i], new Vector3(-4 + distance, -2, 0), Quaternion.identity);
+            createdObjecClone= Instantiate(createdObjects[i], new Vector3(-4 + distance, -2, 0), Quaternion.identity);
+            createdObjecClone.transform.tag = "CloneObject";
             distance += 2.5f;
         }
     }
@@ -48,7 +59,7 @@ public class ChooseGameObjectController : MonoBehaviour
 
     }
 
-    protected void ObjectTypeChoiceAndCreate()
+    private void ObjectTypeChoiceAndCreate()
     {
         switch (objectOne)
         {
@@ -143,7 +154,7 @@ public class ChooseGameObjectController : MonoBehaviour
                 break;
         }
     }
-    protected void ObjectColorChoice()
+    private void ObjectColorChoice()
     {
         switch (objectColorOne)
         {
@@ -242,4 +253,53 @@ public class ChooseGameObjectController : MonoBehaviour
                 break;
         }
     }
+
+    private void ObjectPointChoice()
+    {
+        switch(objecPointOne)
+        {
+            case ObjectPoint.five:
+                break;
+            case ObjectPoint.ten: 
+                break;
+            case ObjectPoint.fifteen:
+                break;
+            case ObjectPoint.twenty:
+                break;
+        }
+        switch (objecPointTwo)
+        {
+            case ObjectPoint.five:
+                break;
+            case ObjectPoint.ten:
+                break;
+            case ObjectPoint.fifteen:
+                break;
+            case ObjectPoint.twenty:
+                break;
+        }
+        switch (objecPointThree)
+        {
+            case ObjectPoint.five:
+                break;
+            case ObjectPoint.ten:
+                break;
+            case ObjectPoint.fifteen:
+                break;
+            case ObjectPoint.twenty:
+                break;
+        }
+        switch (objecPointFour)
+        {
+            case ObjectPoint.five:
+                break;
+            case ObjectPoint.ten:
+                break;
+            case ObjectPoint.fifteen:
+                break;
+            case ObjectPoint.twenty:
+                break;
+        }
+    }
+
 }
