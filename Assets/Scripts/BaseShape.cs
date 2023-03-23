@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
+using UnityEditor;
 using UnityEngine;
 
 public class BaseShape : MonoBehaviour
@@ -12,6 +14,7 @@ public class BaseShape : MonoBehaviour
     public ObjectShape objectShape;
     GameObject createShape;
     bool clicked = false;
+    bool matched = false;
     Vector3 firstPosition;
 
     private void OnEnable()
@@ -22,6 +25,7 @@ public class BaseShape : MonoBehaviour
     {
         EventManager.NotMatched -= NotMatched;
     }
+    
     void NotMatched()
     {
         transform.position=firstPosition;
@@ -34,16 +38,6 @@ public class BaseShape : MonoBehaviour
         ObjectShapeChoice();
     }
 
-    
-    void Update()
-    {
-        //RaycastHit ates;
-        //if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), out ates, Mathf.Infinity))
-        //{
-        //    Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.up) * ates.distance, Color.green);
-            
-        //}
-    }
 
     private void OnMouseDown()
     {
@@ -51,7 +45,7 @@ public class BaseShape : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 2);
             clicked = true;
-            EventManager.OnClick(transform.gameObject);
+            EventManager.OnClick(transform.gameObject,shapePoint);
         }
         else
         {
@@ -59,36 +53,34 @@ public class BaseShape : MonoBehaviour
             clicked = false;
         }
     }
-    
-    void FragmentationControl()
-    {
 
-    }
+    
+
     private void ObjectShapeChoice()
     {
         switch (objectShape) 
         {
             case ObjectShape.Cube:
                 createShape = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                transform.GetComponent<MeshFilter>().mesh = createShape.GetComponent<MeshFilter>().mesh;
+                transform.GetComponent<MeshFilter>().mesh = createShape.GetComponent<MeshFilter>().sharedMesh;
                 transform.GetComponent<Renderer>().material.color = shapeColor;
                 Destroy(createShape);
                 break;
             case ObjectShape.Cylinder:
                 createShape = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
-                transform.GetComponent<MeshFilter>().mesh = createShape.GetComponent<MeshFilter>().mesh;
+                transform.GetComponent<MeshFilter>().mesh = createShape.GetComponent<MeshFilter>().sharedMesh;
                 transform.GetComponent<Renderer>().material.color = shapeColor;
                 Destroy(createShape);
                 break;
             case ObjectShape.Sphere:
                 createShape = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-                transform.GetComponent<MeshFilter>().mesh = createShape.GetComponent<MeshFilter>().mesh;
+                transform.GetComponent<MeshFilter>().mesh = createShape.GetComponent<MeshFilter>().sharedMesh;
                 transform.GetComponent<Renderer>().material.color = shapeColor;
                 Destroy(createShape);
                 break;
             case ObjectShape.Capsule:
                 createShape = GameObject.CreatePrimitive(PrimitiveType.Capsule);
-                transform.GetComponent<MeshFilter>().mesh = createShape.GetComponent<MeshFilter>().mesh;
+                transform.GetComponent<MeshFilter>().mesh = createShape.GetComponent<MeshFilter>().sharedMesh;
                 transform.GetComponent<Renderer>().material.color = shapeColor;
                 Destroy(createShape);
                 break;

@@ -7,6 +7,9 @@ public class EqualityCheck : MonoBehaviour
 {
     GameObject firstObject;
     GameObject secondObject;
+    GameObject thirdObject;
+
+    int totalScore;
 
     private void OnEnable()
     {
@@ -17,41 +20,53 @@ public class EqualityCheck : MonoBehaviour
         EventManager.OnClick -= OnClick;
     }
 
-    void OnClick(GameObject onClickObject)
+    void OnClick(GameObject onClickObject,int point)
     {
-        if (firstObject==null)
+        if (firstObject==null && secondObject==null)
         {
             firstObject = onClickObject;
+            totalScore += point;
+        }
+        else if(secondObject==null) 
+        {
+            secondObject= onClickObject;
+            totalScore += point;
         }
         else
         {
-            secondObject= onClickObject;
+            thirdObject=onClickObject;
+            totalScore += point;
         }
-    }
-
-    void Start()
-    {
-        
     }
 
     
     void Update()
     {
-        if (firstObject!=null && secondObject!=null)
+        if (firstObject != null && secondObject != null && thirdObject != null)
         {
-            if (firstObject.GetComponent<Renderer>().material.color == secondObject.GetComponent<Renderer>().material.color/* && firstObject.GetComponent<MeshFilter>().mesh == secondObject.GetComponent<MeshFilter>().mesh*/)
+            if (firstObject.GetComponent<Renderer>().material.color == secondObject.GetComponent<Renderer>().material.color &&
+                firstObject.GetComponent<Renderer>().material.color  == thirdObject.GetComponent<Renderer>().material.color && 
+                firstObject.GetComponent<MeshFilter>().sharedMesh == secondObject.GetComponent<MeshFilter>().sharedMesh && 
+                firstObject.GetComponent<MeshFilter>().sharedMesh == thirdObject.GetComponent<MeshFilter>().sharedMesh)
             {
+                EventManager.ShapePoint(totalScore);
                 firstObject.SetActive(false);
                 secondObject.SetActive(false);
+                thirdObject.SetActive(false);
                 firstObject = null;
                 secondObject = null;
+                thirdObject = null;
+                totalScore = 0;
             }
             else
             {
                 firstObject = null;
                 secondObject = null;
+                thirdObject = null;
+                totalScore= 0;
                 EventManager.NotMatched();
             }
+            
         }
     }
 }
