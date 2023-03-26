@@ -5,10 +5,9 @@ using UnityEngine;
 
 public class EqualityCheck : MonoBehaviour
 {
-    GameObject firstObject;
-    GameObject secondObject;
-    GameObject thirdObject;
 
+    List<GameObject> shapeObjects;
+    int shapeEqualityCheck;
     int totalScore;
 
     private void OnEnable()
@@ -22,51 +21,51 @@ public class EqualityCheck : MonoBehaviour
 
     void OnClick(GameObject onClickObject,int point)
     {
-        if (firstObject==null && secondObject==null)
+        if (!shapeObjects.Contains(onClickObject))
         {
-            firstObject = onClickObject;
-            totalScore += point;
+            shapeObjects.Add(onClickObject);
+            totalScore = point;
         }
-        else if(secondObject==null) 
-        {
-            secondObject= onClickObject;
-            totalScore += point;
-        }
-        else
-        {
-            thirdObject=onClickObject;
-            totalScore += point;
-        }
+        ShapeEqualityCheck();
+
+    }
+    private void Start()
+    {
+        shapeObjects = new List<GameObject>();
     }
 
-    
-    void Update()
+
+    void ShapeEqualityCheck()
     {
-        if (firstObject != null && secondObject != null && thirdObject != null)
+        Debug.Log(shapeObjects.Count + " liste");
+        if (shapeObjects.Count>=2)
         {
-            if (firstObject.GetComponent<Renderer>().material.color == secondObject.GetComponent<Renderer>().material.color &&
-                firstObject.GetComponent<Renderer>().material.color  == thirdObject.GetComponent<Renderer>().material.color && 
-                firstObject.GetComponent<MeshFilter>().sharedMesh == secondObject.GetComponent<MeshFilter>().sharedMesh && 
-                firstObject.GetComponent<MeshFilter>().sharedMesh == thirdObject.GetComponent<MeshFilter>().sharedMesh)
+            for (int i = 0; i < shapeObjects.Count; i++) 
             {
-                EventManager.ShapePoint(totalScore);
-                firstObject.SetActive(false);
-                secondObject.SetActive(false);
-                thirdObject.SetActive(false);
-                firstObject = null;
-                secondObject = null;
-                thirdObject = null;
-                totalScore = 0;
+                if (shapeObjects[0].transform.GetComponent<BaseShape>().shapeColor == shapeObjects[i].transform.GetComponent<BaseShape>().shapeColor &&
+                    shapeObjects[0].transform.GetComponent<BaseShape>().objectShape == shapeObjects[i].transform.GetComponent<BaseShape>().objectShape)
+                {
+                    shapeEqualityCheck++;
+                    Debug.Log(shapeEqualityCheck);
+                }
+                else
+                {
+                    EventManager.NotMatched();
+                    shapeObjects.Clear();
+                    shapeEqualityCheck = 0;
+                }
             }
-            else
+        }
+        
+        if (shapeEqualityCheck == 3)
+        {
+            EventManager.ShapePoint(totalScore * 3);
+            for (int i = 0; i < shapeObjects.Count; i++)
             {
-                firstObject = null;
-                secondObject = null;
-                thirdObject = null;
-                totalScore= 0;
-                EventManager.NotMatched();
+                shapeObjects[i].gameObject.SetActive(false);
             }
-            
+            shapeObjects.Clear();
+            shapeEqualityCheck = 0;
         }
     }
 }
