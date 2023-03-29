@@ -3,18 +3,13 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEngine;
+using System;
 
 public class BaseShape : MonoBehaviour
 {
-    
-    public Color shapeColor;
-    public int shapePoint;
+    public ShapeInfo shapeInfo;
 
-    public enum ObjectShape { Cube,Cylinder,Sphere,Capsule};
-    public ObjectShape objectShape;
-    GameObject createShape;
     bool clicked = false;
-    bool matched = false;
     Vector3 firstPosition;
 
     private void OnEnable()
@@ -45,7 +40,7 @@ public class BaseShape : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 2);
             clicked = true;
-            EventManager.OnClick(transform.gameObject,shapePoint);
+            EventManager.OnClick(transform.gameObject, shapeInfo.shapePoint);
         }
         else
         {
@@ -58,32 +53,40 @@ public class BaseShape : MonoBehaviour
 
     private void ObjectShapeChoice()
     {
-        switch (objectShape) 
+        switch (shapeInfo.objectShape) 
         {
-            case ObjectShape.Cube:
-                createShape = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                transform.GetComponent<MeshFilter>().mesh = createShape.GetComponent<MeshFilter>().sharedMesh;
-                transform.GetComponent<Renderer>().material.color = shapeColor;
-                Destroy(createShape);
+            case ShapeInfo.ObjectShape.Cube:
+                transform.GetComponent<MeshFilter>().mesh = shapeInfo.Cube.GetComponent<MeshFilter>().sharedMesh;
+                transform.GetComponent<Renderer>().material.color = shapeInfo.shapeColor;
                 break;
-            case ObjectShape.Cylinder:
-                createShape = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
-                transform.GetComponent<MeshFilter>().mesh = createShape.GetComponent<MeshFilter>().sharedMesh;
-                transform.GetComponent<Renderer>().material.color = shapeColor;
-                Destroy(createShape);
+            case ShapeInfo.ObjectShape.Cylinder:
+                transform.GetComponent<MeshFilter>().mesh = shapeInfo.Cylinder.GetComponent<MeshFilter>().sharedMesh;
+                transform.GetComponent<Renderer>().material.color = shapeInfo.shapeColor;
                 break;
-            case ObjectShape.Sphere:
-                createShape = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-                transform.GetComponent<MeshFilter>().mesh = createShape.GetComponent<MeshFilter>().sharedMesh;
-                transform.GetComponent<Renderer>().material.color = shapeColor;
-                Destroy(createShape);
+            case ShapeInfo.ObjectShape.Sphere:
+                transform.GetComponent<MeshFilter>().mesh = shapeInfo.Sphere.GetComponent<MeshFilter>().sharedMesh;
+                transform.GetComponent<Renderer>().material.color = shapeInfo.shapeColor;
                 break;
-            case ObjectShape.Capsule:
-                createShape = GameObject.CreatePrimitive(PrimitiveType.Capsule);
-                transform.GetComponent<MeshFilter>().mesh = createShape.GetComponent<MeshFilter>().sharedMesh;
-                transform.GetComponent<Renderer>().material.color = shapeColor;
-                Destroy(createShape);
+            case ShapeInfo.ObjectShape.Capsule:
+                transform.GetComponent<MeshFilter>().mesh = shapeInfo.Capsule.GetComponent<MeshFilter>().sharedMesh;
+                transform.GetComponent<Renderer>().material.color = shapeInfo.shapeColor;
                 break;
         }
     }
+}
+
+[Serializable]
+public struct ShapeInfo
+{
+    public GameObject Cube;
+    public GameObject Cylinder;
+    public GameObject Sphere;
+    public GameObject Capsule;
+
+    public Color shapeColor;
+    
+    public int shapePoint;
+    
+    public enum ObjectShape { Cube, Cylinder, Sphere, Capsule };
+    public ObjectShape objectShape;
 }

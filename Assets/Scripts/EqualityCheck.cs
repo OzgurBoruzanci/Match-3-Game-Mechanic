@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EqualityCheck : MonoBehaviour
 {
-
+    public int amountOfObjectsToMatch = 3;
     List<GameObject> shapeObjects;
     int shapeEqualityCheck;
     int totalScore;
@@ -34,19 +34,28 @@ public class EqualityCheck : MonoBehaviour
         shapeObjects = new List<GameObject>();
     }
 
-
     void ShapeEqualityCheck()
     {
-        Debug.Log(shapeObjects.Count + " liste");
-        if (shapeObjects.Count>=2)
+        
+        if (shapeObjects.Count< amountOfObjectsToMatch)
         {
-            for (int i = 0; i < shapeObjects.Count; i++) 
+            for (int i = 0; i < shapeObjects.Count; i++)
             {
-                if (shapeObjects[0].transform.GetComponent<BaseShape>().shapeColor == shapeObjects[i].transform.GetComponent<BaseShape>().shapeColor &&
-                    shapeObjects[0].transform.GetComponent<BaseShape>().objectShape == shapeObjects[i].transform.GetComponent<BaseShape>().objectShape)
+                if (!EqualityCondition(i))
+                {
+                    EventManager.NotMatched();
+                    shapeObjects.Clear();
+                    shapeEqualityCheck = 0;
+                }
+            }
+        }
+        else if (shapeObjects.Count==amountOfObjectsToMatch)
+        {
+            for (int i = 0; i < shapeObjects.Count; i++)
+            {
+                if (EqualityCondition(i))
                 {
                     shapeEqualityCheck++;
-                    Debug.Log(shapeEqualityCheck);
                 }
                 else
                 {
@@ -56,16 +65,29 @@ public class EqualityCheck : MonoBehaviour
                 }
             }
         }
-        
-        if (shapeEqualityCheck == 3)
+
+        if (shapeEqualityCheck == amountOfObjectsToMatch)
         {
             EventManager.ShapePoint(totalScore * 3);
             for (int i = 0; i < shapeObjects.Count; i++)
-            {
+            {        
                 shapeObjects[i].gameObject.SetActive(false);
             }
             shapeObjects.Clear();
             shapeEqualityCheck = 0;
+        }
+    }
+
+    bool EqualityCondition(int i)
+    {
+        if (shapeObjects[0].transform.GetComponent<BaseShape>().shapeInfo.shapeColor == shapeObjects[i].transform.GetComponent<BaseShape>().shapeInfo.shapeColor &&
+                    shapeObjects[0].transform.GetComponent<BaseShape>().shapeInfo.objectShape == shapeObjects[i].transform.GetComponent<BaseShape>().shapeInfo.objectShape)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }

@@ -255,9 +255,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a259086308681524db16c8718ce86ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 0.8490566, g: 0.14017442, b: 0.14017442, a: 0}
-  shapePoint: 10
-  objectShape: 2
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 1, g: 0, b: 0, a: 0}
+    shapePoint: 10
+    objectShape: 2
 --- !u!135 &138830286
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -432,9 +437,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 962bbd65b74e949469cd792d32b7320d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 1, g: 0, b: 1, a: 0}
-  shapePoint: 15
-  objectShape: 3
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 0.19607843, g: 0.39215687, b: 0.5882353, a: 0}
+    shapePoint: 15
+    objectShape: 3
 --- !u!136 &205719966
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -544,9 +554,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 962bbd65b74e949469cd792d32b7320d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 0, g: 0, b: 1, a: 0}
-  shapePoint: 15
-  objectShape: 3
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 0, g: 0.39215687, b: 0.39215687, a: 0}
+    shapePoint: 15
+    objectShape: 3
 --- !u!136 &311471773
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -722,9 +737,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b516afba94a754248a37c8ace740d7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 0.8207547, g: 0.70017564, b: 0.19744569, a: 0}
-  shapePoint: 5
-  objectShape: 0
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 0, g: 1, b: 0, a: 0}
+    shapePoint: 5
+    objectShape: 0
 --- !u!65 &400591706
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -833,9 +853,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 962bbd65b74e949469cd792d32b7320d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 0, g: 0.54901963, b: 0.8679245, a: 0}
-  shapePoint: 15
-  objectShape: 3
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 0, g: 0, b: 1, a: 0}
+    shapePoint: 15
+    objectShape: 3
 --- !u!136 &440269618
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -945,9 +970,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b516afba94a754248a37c8ace740d7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 1, g: 1, b: 1, a: 0}
-  shapePoint: 5
-  objectShape: 0
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 0.39215687, g: 0, b: 0.39215687, a: 0}
+    shapePoint: 5
+    objectShape: 0
 --- !u!65 &455078983
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1056,9 +1086,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a259086308681524db16c8718ce86ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 0.78431374, g: 0, b: 0.5882353, a: 0}
-  shapePoint: 10
-  objectShape: 2
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 0.39215687, g: 0, b: 0, a: 0}
+    shapePoint: 10
+    objectShape: 2
 --- !u!135 &687761552
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1260,9 +1295,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b516afba94a754248a37c8ace740d7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 1, g: 1, b: 1, a: 0}
-  shapePoint: 5
-  objectShape: 0
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 1, g: 0.8235294, b: 0, a: 0}
+    shapePoint: 5
+    objectShape: 0
 --- !u!65 &793878917
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1371,9 +1411,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 962bbd65b74e949469cd792d32b7320d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 0, g: 0, b: 1, a: 0}
-  shapePoint: 15
-  objectShape: 3
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 0, g: 0.39215687, b: 0.39215687, a: 0}
+    shapePoint: 15
+    objectShape: 3
 --- !u!136 &834989348
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1562,9 +1607,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70eb8f30f7e4514a9723bd67035a2e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 0.5882353, g: 0, b: 1, a: 0}
-  shapePoint: 20
-  objectShape: 1
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 0.5882353, g: 0.19607843, b: 0.5882353, a: 0}
+    shapePoint: 20
+    objectShape: 1
 --- !u!136 &949654482
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1755,6 +1805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7343b035d1c1d814c8dc9efb0ae82c39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  amountOfObjectsToMatch: 3
 --- !u!4 &986590245
 Transform:
   m_ObjectHideFlags: 0
@@ -1814,9 +1865,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 962bbd65b74e949469cd792d32b7320d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 0, g: 0, b: 1, a: 0}
-  shapePoint: 15
-  objectShape: 3
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 0.19607843, g: 0.39215687, b: 0.5882353, a: 0}
+    shapePoint: 15
+    objectShape: 3
 --- !u!136 &1065633782
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1926,9 +1982,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b516afba94a754248a37c8ace740d7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 0.8207547, g: 0.70017564, b: 0.19744569, a: 0}
-  shapePoint: 5
-  objectShape: 0
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 1, g: 0.8246851, b: 0, a: 0}
+    shapePoint: 5
+    objectShape: 0
 --- !u!65 &1083182714
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2019,7 +2080,7 @@ GameObject:
   - component: {fileID: 1139050654}
   - component: {fileID: 1139050658}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Capsule (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2114,9 +2175,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 962bbd65b74e949469cd792d32b7320d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 0, g: 0.54901963, b: 0.8679245, a: 0}
-  shapePoint: 15
-  objectShape: 3
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 0, g: 0, b: 1, a: 0}
+    shapePoint: 15
+    objectShape: 3
 --- !u!1 &1159800836
 GameObject:
   m_ObjectHideFlags: 0
@@ -2131,7 +2197,7 @@ GameObject:
   - component: {fileID: 1159800837}
   - component: {fileID: 1159800841}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Sphere (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2225,9 +2291,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a259086308681524db16c8718ce86ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 0.8490566, g: 0.14017442, b: 0.14017442, a: 0}
-  shapePoint: 10
-  objectShape: 2
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 1, g: 0, b: 0, a: 0}
+    shapePoint: 10
+    objectShape: 2
 --- !u!1 &1168777712
 GameObject:
   m_ObjectHideFlags: 0
@@ -2260,9 +2331,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70eb8f30f7e4514a9723bd67035a2e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 0.19607843, g: 0.39215687, b: 0.5882353, a: 0}
-  shapePoint: 20
-  objectShape: 1
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 0.39215687, g: 0.5882353, b: 0.19607843, a: 0}
+    shapePoint: 20
+    objectShape: 1
 --- !u!136 &1168777714
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2372,9 +2448,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a259086308681524db16c8718ce86ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 1, g: 0.39215687, b: 0, a: 0}
-  shapePoint: 10
-  objectShape: 2
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 0.39215687, g: 0.39215687, b: 0, a: 0}
+    shapePoint: 10
+    objectShape: 2
 --- !u!135 &1181673510
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2483,9 +2564,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a259086308681524db16c8718ce86ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 0.8490566, g: 0.14017442, b: 0.14017442, a: 0}
-  shapePoint: 10
-  objectShape: 2
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 1, g: 0, b: 0, a: 0}
+    shapePoint: 10
+    objectShape: 2
 --- !u!135 &1233495167
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2594,9 +2680,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a259086308681524db16c8718ce86ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 1, g: 0.39215687, b: 0, a: 0}
-  shapePoint: 10
-  objectShape: 2
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 0.39215687, g: 0, b: 0, a: 0}
+    shapePoint: 10
+    objectShape: 2
 --- !u!135 &1248128381
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2705,9 +2796,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a259086308681524db16c8718ce86ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 1, g: 0.39215687, b: 0, a: 0}
-  shapePoint: 10
-  objectShape: 2
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 0.39215687, g: 0.39215687, b: 0, a: 0}
+    shapePoint: 10
+    objectShape: 2
 --- !u!135 &1266237349
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2816,9 +2912,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a259086308681524db16c8718ce86ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 0.78431374, g: 0, b: 0.5882353, a: 0}
-  shapePoint: 10
-  objectShape: 2
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 0.39215687, g: 0, b: 0, a: 0}
+    shapePoint: 10
+    objectShape: 2
 --- !u!135 &1293919399
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2909,7 +3010,7 @@ GameObject:
   - component: {fileID: 1306026553}
   - component: {fileID: 1306026557}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Cube (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2985,7 +3086,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1306026552}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.87, y: 9.62, z: 0}
+  m_LocalPosition: {x: -3.82, y: 9.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 385670835}
@@ -3003,9 +3104,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b516afba94a754248a37c8ace740d7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 0.8207547, g: 0.70017564, b: 0.19744569, a: 0}
-  shapePoint: 5
-  objectShape: 0
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 0, g: 1, b: 0, a: 0}
+    shapePoint: 5
+    objectShape: 0
 --- !u!1 &1322196189
 GameObject:
   m_ObjectHideFlags: 0
@@ -3038,9 +3144,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b516afba94a754248a37c8ace740d7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 0, g: 1, b: 0, a: 0}
-  shapePoint: 5
-  objectShape: 0
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 1, g: 0.8235294, b: 0, a: 0}
+    shapePoint: 5
+    objectShape: 0
 --- !u!65 &1322196191
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3149,9 +3260,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70eb8f30f7e4514a9723bd67035a2e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 0.5882353, g: 0.39215687, b: 0.19607843, a: 0}
-  shapePoint: 20
-  objectShape: 1
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 0.5882353, g: 0.19607843, b: 0.5882353, a: 0}
+    shapePoint: 20
+    objectShape: 1
 --- !u!136 &1323490393
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3261,9 +3377,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 962bbd65b74e949469cd792d32b7320d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 1, g: 0, b: 1, a: 0}
-  shapePoint: 15
-  objectShape: 3
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 0.19607843, g: 0.39215687, b: 0.5882353, a: 0}
+    shapePoint: 15
+    objectShape: 3
 --- !u!136 &1358663997
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3373,9 +3494,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70eb8f30f7e4514a9723bd67035a2e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 0.5882353, g: 0, b: 1, a: 0}
-  shapePoint: 20
-  objectShape: 1
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 0.19607843, g: 0.39215687, b: 0.19607843, a: 0}
+    shapePoint: 20
+    objectShape: 1
 --- !u!136 &1424248955
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3485,9 +3611,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70eb8f30f7e4514a9723bd67035a2e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 0.19607843, g: 0.39215687, b: 0.5882353, a: 0}
-  shapePoint: 20
-  objectShape: 1
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 0.39215687, g: 0.5882353, b: 0.19607843, a: 0}
+    shapePoint: 20
+    objectShape: 1
 --- !u!136 &1440599848
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3597,9 +3728,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b516afba94a754248a37c8ace740d7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 0, g: 1, b: 0, a: 0}
-  shapePoint: 5
-  objectShape: 0
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 0, g: 1, b: 0, a: 0}
+    shapePoint: 5
+    objectShape: 0
 --- !u!65 &1446720128
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3708,9 +3844,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70eb8f30f7e4514a9723bd67035a2e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 0.5882353, g: 0, b: 1, a: 0}
-  shapePoint: 20
-  objectShape: 1
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 0.19607843, g: 0.39215687, b: 0.19607843, a: 0}
+    shapePoint: 20
+    objectShape: 1
 --- !u!136 &1458026904
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3820,9 +3961,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a259086308681524db16c8718ce86ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 0.78431374, g: 0, b: 0.5882353, a: 0}
-  shapePoint: 10
-  objectShape: 2
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 0.39215687, g: 0.39215687, b: 0, a: 0}
+    shapePoint: 10
+    objectShape: 2
 --- !u!135 &1471236283
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3931,9 +4077,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 962bbd65b74e949469cd792d32b7320d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 0, g: 0.54901963, b: 0.8679245, a: 0}
-  shapePoint: 15
-  objectShape: 3
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 0, g: 0.39215687, b: 0.39215687, a: 0}
+    shapePoint: 15
+    objectShape: 3
 --- !u!136 &1592503426
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4005,7 +4156,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1592503424}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: -0.39999998, z: 0}
+  m_LocalPosition: {x: -2, y: -0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 385670835}
@@ -4043,9 +4194,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b516afba94a754248a37c8ace740d7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 1, g: 1, b: 1, a: 0}
-  shapePoint: 5
-  objectShape: 0
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 0.39215687, g: 0, b: 0.39215687, a: 0}
+    shapePoint: 5
+    objectShape: 0
 --- !u!65 &1672469961
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4154,9 +4310,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b516afba94a754248a37c8ace740d7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 0, g: 1, b: 0, a: 0}
-  shapePoint: 5
-  objectShape: 0
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 0.39215687, g: 0, b: 0.39215687, a: 0}
+    shapePoint: 5
+    objectShape: 0
 --- !u!65 &1702263598
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4247,7 +4408,7 @@ GameObject:
   - component: {fileID: 1830051973}
   - component: {fileID: 1830051977}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Cylinder (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4342,9 +4503,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70eb8f30f7e4514a9723bd67035a2e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 0.19607843, g: 0.39215687, b: 0.5882353, a: 0}
-  shapePoint: 20
-  objectShape: 1
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 0.39215687, g: 0.5882353, b: 0.19607843, a: 0}
+    shapePoint: 20
+    objectShape: 1
 --- !u!1 &1905062265
 GameObject:
   m_ObjectHideFlags: 0
@@ -4377,9 +4543,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70eb8f30f7e4514a9723bd67035a2e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 0.5882353, g: 0.39215687, b: 0.19607843, a: 0}
-  shapePoint: 20
-  objectShape: 1
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 0.19607843, g: 0.39215687, b: 0.19607843, a: 0}
+    shapePoint: 20
+    objectShape: 1
 --- !u!136 &1905062267
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4489,9 +4660,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 962bbd65b74e949469cd792d32b7320d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 1, g: 0, b: 1, a: 0}
-  shapePoint: 15
-  objectShape: 3
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 0, g: 0, b: 1, a: 0}
+    shapePoint: 15
+    objectShape: 3
 --- !u!136 &2014396859
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4601,9 +4777,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70eb8f30f7e4514a9723bd67035a2e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeColor: {r: 0.5882353, g: 0.39215687, b: 0.19607843, a: 0}
-  shapePoint: 20
-  objectShape: 1
+  shapeInfo:
+    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
+    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
+    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
+    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeColor: {r: 0.5882353, g: 0.19607843, b: 0.5882353, a: 0}
+    shapePoint: 20
+    objectShape: 1
 --- !u!136 &2060853121
 CapsuleCollider:
   m_ObjectHideFlags: 0
