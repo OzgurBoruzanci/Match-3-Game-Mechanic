@@ -64,6 +64,7 @@ public class EqualityCheck : MonoBehaviour
                     shapeEqualityCheck = 0;
                 }
             }
+
         }
 
         if (shapeEqualityCheck == amountOfObjectsToMatch)
