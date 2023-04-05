@@ -1594,17 +1594,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6553965763946576320, guid: daad0e4d3479dd54aa7bac6b8757f5d7, type: 3}
   m_PrefabInstance: {fileID: 830789659}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &910127784 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 828432186543462350, guid: 41ccee4877971284391ce4c408f9b18c, type: 3}
-  m_PrefabInstance: {fileID: 828432185635841382}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &925609924
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3625,10 +3614,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8077314969219216896, guid: c44c0d6bc8a3a3b478ad1466e3ca7037, type: 3}
-      propertyPath: pointText
-      value: 
-      objectReference: {fileID: 910127784}
     - target: {fileID: 8077314969219216898, guid: c44c0d6bc8a3a3b478ad1466e3ca7037, type: 3}
       propertyPath: amountOfObjectsToMatch
       value: 3

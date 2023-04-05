@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class EventManager
 {
-    public static Action<GameObject,int> OnClick;
+    public static Action<BaseShape,int> OnClick;
     public static Action NotMatched;
     public static Action<int> ShapePoint;
 }

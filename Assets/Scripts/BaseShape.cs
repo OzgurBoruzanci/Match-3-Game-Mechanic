@@ -30,7 +30,8 @@ public class BaseShape : MonoBehaviour
     void Start()
     {
         firstPosition= transform.position;
-        ObjectShapeChoice();
+        shapeInfo.shapeMesh = transform.GetComponent<MeshFilter>().sharedMesh;
+        transform.GetComponent<Renderer>().material.color = shapeInfo.shapeColor;
     }
 
 
@@ -40,7 +41,7 @@ public class BaseShape : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 2);
             clicked = true;
-            EventManager.OnClick(transform.gameObject, shapeInfo.shapePoint);
+            EventManager.OnClick(transform.GetComponent<BaseShape>(), shapeInfo.shapePoint);
         }
         else
         {
@@ -49,44 +50,14 @@ public class BaseShape : MonoBehaviour
         }
     }
 
-    
-
-    private void ObjectShapeChoice()
-    {
-        switch (shapeInfo.objectShape) 
-        {
-            case ShapeInfo.ObjectShape.Cube:
-                transform.GetComponent<MeshFilter>().mesh = shapeInfo.Cube.GetComponent<MeshFilter>().sharedMesh;
-                transform.GetComponent<Renderer>().material.color = shapeInfo.shapeColor;
-                break;
-            case ShapeInfo.ObjectShape.Cylinder:
-                transform.GetComponent<MeshFilter>().mesh = shapeInfo.Cylinder.GetComponent<MeshFilter>().sharedMesh;
-                transform.GetComponent<Renderer>().material.color = shapeInfo.shapeColor;
-                break;
-            case ShapeInfo.ObjectShape.Sphere:
-                transform.GetComponent<MeshFilter>().mesh = shapeInfo.Sphere.GetComponent<MeshFilter>().sharedMesh;
-                transform.GetComponent<Renderer>().material.color = shapeInfo.shapeColor;
-                break;
-            case ShapeInfo.ObjectShape.Capsule:
-                transform.GetComponent<MeshFilter>().mesh = shapeInfo.Capsule.GetComponent<MeshFilter>().sharedMesh;
-                transform.GetComponent<Renderer>().material.color = shapeInfo.shapeColor;
-                break;
-        }
-    }
 }
 
 [Serializable]
 public struct ShapeInfo
 {
-    public GameObject Cube;
-    public GameObject Cylinder;
-    public GameObject Sphere;
-    public GameObject Capsule;
-
+    public Mesh shapeMesh;
     public Color shapeColor;
     
     public int shapePoint;
-    
-    public enum ObjectShape { Cube, Cylinder, Sphere, Capsule };
-    public ObjectShape objectShape;
+
 }

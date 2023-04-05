@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8077314969219216899}
   - component: {fileID: 8077314969219216898}
-  - component: {fileID: 8077314969219216896}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -45,16 +44,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amountOfObjectsToMatch: 3
---- !u!114 &8077314969219216896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8077314969219216901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cadc4afd8a2821b4c9f7b5313f149a38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointText: {fileID: 0}

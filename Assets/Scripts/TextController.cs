@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TextController : MonoBehaviour
 {
-    public Text pointText;
+    Text pointText;
     int shapePoint = 0;
 
     private void OnEnable()
@@ -20,7 +20,10 @@ public class TextController : MonoBehaviour
     {
         shapePoint += shapePt;
     }
-
+    private void Start()
+    {
+        pointText = GetComponent<Text>();
+    }
     void Update()
     {
         pointText.text="Point : "+ shapePoint;

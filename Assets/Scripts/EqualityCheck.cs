@@ -6,8 +6,7 @@ using UnityEngine;
 public class EqualityCheck : MonoBehaviour
 {
     public int amountOfObjectsToMatch = 3;
-    List<GameObject> shapeObjects;
-    int shapeEqualityCheck;
+    List<BaseShape> shapeObjects;
     int totalScore;
 
     private void OnEnable()
@@ -19,11 +18,11 @@ public class EqualityCheck : MonoBehaviour
         EventManager.OnClick -= OnClick;
     }
 
-    void OnClick(GameObject onClickObject,int point)
+    void OnClick(BaseShape baseShape,int point)
     {
-        if (!shapeObjects.Contains(onClickObject))
+        if (!shapeObjects.Contains(baseShape))
         {
-            shapeObjects.Add(onClickObject);
+            shapeObjects.Add(baseShape);
             totalScore = point;
         }
         ShapeEqualityCheck();
@@ -31,64 +30,53 @@ public class EqualityCheck : MonoBehaviour
     }
     private void Start()
     {
-        shapeObjects = new List<GameObject>();
+        shapeObjects = new List<BaseShape>();
     }
 
     void ShapeEqualityCheck()
     {
-        
-        if (shapeObjects.Count< amountOfObjectsToMatch)
+        if (shapeObjects.Count < amountOfObjectsToMatch)
         {
-            for (int i = 0; i < shapeObjects.Count; i++)
+            if (!EqualityCondition())
             {
-                if (!EqualityCondition(i))
-                {
-                    EventManager.NotMatched();
-                    shapeObjects.Clear();
-                    shapeEqualityCheck = 0;
-                }
+                EventManager.NotMatched();
+                shapeObjects.Clear();
             }
         }
-        else if (shapeObjects.Count==amountOfObjectsToMatch)
+        else if (shapeObjects.Count == amountOfObjectsToMatch)
         {
-            for (int i = 0; i < shapeObjects.Count; i++)
+            if (EqualityCondition())
             {
-                if (EqualityCondition(i))
+                EventManager.ShapePoint(totalScore * amountOfObjectsToMatch);
+                for (int i = 0; i < shapeObjects.Count; i++)
                 {
-                    shapeEqualityCheck++;
+                    shapeObjects[i].gameObject.SetActive(false);
                 }
-                else
-                {
-                    EventManager.NotMatched();
-                    shapeObjects.Clear();
-                    shapeEqualityCheck = 0;
-                }
+                shapeObjects.Clear();
             }
-
-        }
-
-        if (shapeEqualityCheck == amountOfObjectsToMatch)
-        {
-            EventManager.ShapePoint(totalScore * 3);
-            for (int i = 0; i < shapeObjects.Count; i++)
-            {        
-                shapeObjects[i].gameObject.SetActive(false);
+            else
+            {
+                EventManager.NotMatched();
+                shapeObjects.Clear();
             }
-            shapeObjects.Clear();
-            shapeEqualityCheck = 0;
         }
     }
 
-    bool EqualityCondition(int i)
+    bool EqualityCondition()
     {
-        if (shapeObjects[0].transform.GetComponent<BaseShape>().shapeInfo.shapeColor == shapeObjects[i].transform.GetComponent<BaseShape>().shapeInfo.shapeColor &&
-                    shapeObjects[0].transform.GetComponent<BaseShape>().shapeInfo.objectShape == shapeObjects[i].transform.GetComponent<BaseShape>().shapeInfo.objectShape)
+        bool isItEqual = false;
+        foreach (BaseShape baseShape in shapeObjects)
         {
-            return true;
+            if (shapeObjects[0].shapeInfo.shapeColor == baseShape.shapeInfo.shapeColor &&
+           shapeObjects[0].shapeInfo.shapeMesh == baseShape.shapeInfo.shapeMesh)
+            {
+                isItEqual = true;
+            }
+            else
+            {
+                isItEqual = false;
+            }
         }
-        else
-        {
-            return false;
-        }
+        return isItEqual;
     }
 }
