@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TextController : MonoBehaviour
+public class PointTextController : MonoBehaviour
 {
     Text pointText;
     int shapePoint = 0;
@@ -26,6 +26,6 @@ public class TextController : MonoBehaviour
     }
     void Update()
     {
-        pointText.text="Point : "+ shapePoint;
+        pointText.text = "Point : " + shapePoint;
     }
 }

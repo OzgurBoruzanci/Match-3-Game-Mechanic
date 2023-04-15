@@ -18,12 +18,12 @@ public class EqualityCheck : MonoBehaviour
         EventManager.OnClick -= OnClick;
     }
 
-    void OnClick(BaseShape baseShape,int point)
+    void OnClick(BaseShape baseShape)
     {
         if (!shapeObjects.Contains(baseShape))
         {
             shapeObjects.Add(baseShape);
-            totalScore = point;
+            totalScore = baseShape.shapeInfo.shapePoint;
         }
         ShapeEqualityCheck();
 
@@ -68,7 +68,7 @@ public class EqualityCheck : MonoBehaviour
         foreach (BaseShape baseShape in shapeObjects)
         {
             if (shapeObjects[0].shapeInfo.shapeColor == baseShape.shapeInfo.shapeColor &&
-           shapeObjects[0].shapeInfo.shapeMesh == baseShape.shapeInfo.shapeMesh)
+           shapeObjects[0].shapeInfo.objectShape == baseShape.shapeInfo.objectShape)
             {
                 isItEqual = true;
             }

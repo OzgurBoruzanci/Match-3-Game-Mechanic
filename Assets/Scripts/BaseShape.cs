@@ -32,6 +32,7 @@ public class BaseShape : MonoBehaviour
         firstPosition= transform.position;
         shapeInfo.shapeMesh = transform.GetComponent<MeshFilter>().sharedMesh;
         transform.GetComponent<Renderer>().material.color = shapeInfo.shapeColor;
+        ObjectShapeChoice();
     }
 
 
@@ -41,12 +42,27 @@ public class BaseShape : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 2);
             clicked = true;
-            EventManager.OnClick(transform.GetComponent<BaseShape>(), shapeInfo.shapePoint);
+            EventManager.OnClick(transform.GetComponent<BaseShape>());
         }
         else
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 2);
             clicked = false;
+        }
+    }
+
+    private void ObjectShapeChoice()
+    {
+        switch (shapeInfo.objectShape)
+        {
+            case ShapeInfo.ObjectShape.Cube:
+                break;
+            case ShapeInfo.ObjectShape.Sphere:
+                break;
+            case ShapeInfo.ObjectShape.Cylinder:
+                break;
+            case ShapeInfo.ObjectShape.Capsule:
+                break;
         }
     }
 
@@ -60,4 +76,6 @@ public struct ShapeInfo
     
     public int shapePoint;
 
+    public enum ObjectShape { Cube, Cylinder, Sphere, Capsule };
+    public ObjectShape objectShape;
 }
