@@ -1036,6 +1036,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8575044214910144419, guid: 7bcc89428ed0baf4483226f7a24bcff6, type: 3}
+      propertyPath: positionWhenSelected
+      value: 
+      objectReference: {fileID: 11400000, guid: bbdb11b4b7553e94099efe6049e62a09, type: 2}
     - target: {fileID: 8575044214910144430, guid: 7bcc89428ed0baf4483226f7a24bcff6, type: 3}
       propertyPath: m_Name
       value: SphereObject (1)
@@ -1787,6 +1791,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1886912071224677678, guid: 0301cb1657d57594e83bbd3aa882ace6, type: 3}
+      propertyPath: positionWhenSelected
+      value: 
+      objectReference: {fileID: 11400000, guid: 2be2fa31541f0e04f9023c76570686dd, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0301cb1657d57594e83bbd3aa882ace6, type: 3}
 --- !u!4 &1097901190 stripped
@@ -2806,6 +2814,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1886912071224677678, guid: 0301cb1657d57594e83bbd3aa882ace6, type: 3}
+      propertyPath: positionWhenSelected
+      value: 
+      objectReference: {fileID: 11400000, guid: bbdb11b4b7553e94099efe6049e62a09, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0301cb1657d57594e83bbd3aa882ace6, type: 3}
 --- !u!1001 &1828420991
@@ -3420,6 +3432,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CubeObject (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6135793872084514940, guid: efea977b7b20d3b4d9e9b8e355fc12e6, type: 3}
+      propertyPath: positionWhenSelected
+      value: 
+      objectReference: {fileID: 11400000, guid: bbdb11b4b7553e94099efe6049e62a09, type: 2}
     - target: {fileID: 6135793872084514941, guid: efea977b7b20d3b4d9e9b8e355fc12e6, type: 3}
       propertyPath: m_RootOrder
       value: 5

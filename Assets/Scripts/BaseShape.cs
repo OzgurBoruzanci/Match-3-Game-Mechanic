@@ -11,7 +11,8 @@ public class BaseShape : MonoBehaviour
 
     bool clicked = false;
     Vector3 firstPosition;
-
+    [SerializeField]
+    PositionWhenSelected positionWhenSelected;
     private void OnEnable()
     {
         EventManager.NotMatched += NotMatched;
@@ -40,13 +41,14 @@ public class BaseShape : MonoBehaviour
     {
         if (!clicked)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 2);
+            //transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 2);
+            positionWhenSelected.positionOnClicked(transform.GetComponent<BaseShape>());
             clicked = true;
             EventManager.OnClick(transform.GetComponent<BaseShape>());
         }
         else
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 2);
+            transform.position = firstPosition;
             clicked = false;
         }
     }

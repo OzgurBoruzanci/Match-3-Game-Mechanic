@@ -110,10 +110,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shapeInfo:
-    Cube: {fileID: 4558490938671509527, guid: 1eff91b9c3bba6b4e97006ad8c4a0b22, type: 3}
-    Cylinder: {fileID: 9174988792180455246, guid: 163b058f5f6c7e54191bb52e325e612f, type: 3}
-    Sphere: {fileID: 6233586795715098070, guid: bd3e2c408b2cf3247a3a60fcbda8f92f, type: 3}
-    Capsule: {fileID: 3931133433146492700, guid: 09da7aebe210e2948b186e2a4c0658c8, type: 3}
+    shapeMesh: {fileID: 0}
     shapeColor: {r: 0.39215687, g: 0.5882353, b: 0.19607843, a: 0}
     shapePoint: 20
     objectShape: 1
+  positionWhenSelected: {fileID: 11400000, guid: 2be2fa31541f0e04f9023c76570686dd, type: 2}
