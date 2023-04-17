@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEngine;
 
-public class EqualityCheck : MonoBehaviour
+public class EqualityCheck : MonoBehaviour, IEqualityCheck
 {
     public int amountOfObjectsToMatch = 3;
     List<BaseShape> shapeObjects;
@@ -33,7 +33,7 @@ public class EqualityCheck : MonoBehaviour
         shapeObjects = new List<BaseShape>();
     }
 
-    void ShapeEqualityCheck()
+    public void ShapeEqualityCheck()
     {
         if (shapeObjects.Count < amountOfObjectsToMatch)
         {
@@ -62,7 +62,7 @@ public class EqualityCheck : MonoBehaviour
         }
     }
 
-    bool EqualityCondition()
+    public bool EqualityCondition()
     {
         bool isItEqual = false;
         foreach (BaseShape baseShape in shapeObjects)
@@ -79,4 +79,6 @@ public class EqualityCheck : MonoBehaviour
         }
         return isItEqual;
     }
+
+    
 }
