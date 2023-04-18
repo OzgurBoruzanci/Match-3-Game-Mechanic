@@ -41,8 +41,7 @@ public class BaseShape : MonoBehaviour
     {
         if (!clicked)
         {
-            //transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 2);
-            positionWhenSelected.positionOnClicked(transform.GetComponent<BaseShape>());
+            positionWhenSelected.PositionOnClicked(transform.GetComponent<BaseShape>());
             clicked = true;
             EventManager.OnClick(transform.GetComponent<BaseShape>());
         }

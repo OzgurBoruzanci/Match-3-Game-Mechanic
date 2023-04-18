@@ -6,7 +6,7 @@ using UnityEngine;
 public class SetForward : PositionWhenSelected
 {
     public float distance = 2f;
-    public override void positionOnClicked(BaseShape baseShape)
+    public override void PositionOnClicked(BaseShape baseShape)
     {
         baseShape.transform.position = new Vector3(baseShape.transform.position.x, baseShape.transform.position.y, baseShape.transform.position.z - distance);
     }

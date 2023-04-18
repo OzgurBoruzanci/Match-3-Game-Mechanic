@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class PositionWhenSelected : ScriptableObject
 {
-    public abstract void positionOnClicked(BaseShape baseShape);
+    public abstract void PositionOnClicked(BaseShape baseShape);
 }

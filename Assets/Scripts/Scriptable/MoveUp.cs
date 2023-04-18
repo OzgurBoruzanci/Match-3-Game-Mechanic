@@ -9,7 +9,7 @@ public class MoveUp : PositionWhenSelected
     public float distance = 1.5f;
     public float hight = 1.5f;
 
-    public override void positionOnClicked(BaseShape baseShape)
+    public override void PositionOnClicked(BaseShape baseShape)
     {
         baseShape.transform.position = new Vector3(baseShape.transform.position.x, baseShape.transform.position.y + hight, baseShape.transform.position.z - distance);
     }
