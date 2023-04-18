@@ -110,7 +110,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shapeInfo:
-    shapeMesh: {fileID: 0}
     shapeColor: {r: 0, g: 0, b: 1, a: 0}
     shapePoint: 15
     objectShape: 3

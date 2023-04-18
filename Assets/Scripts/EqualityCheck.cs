@@ -39,27 +39,36 @@ public class EqualityCheck : MonoBehaviour, IEqualityCheck
         {
             if (!EqualityCondition())
             {
-                EventManager.NotMatched();
-                shapeObjects.Clear();
+                NotMatched();
             }
         }
         else if (shapeObjects.Count == amountOfObjectsToMatch)
         {
             if (EqualityCondition())
             {
-                EventManager.ShapePoint(totalScore * amountOfObjectsToMatch);
-                for (int i = 0; i < shapeObjects.Count; i++)
-                {
-                    shapeObjects[i].gameObject.SetActive(false);
-                }
-                shapeObjects.Clear();
+                Matched();
             }
             else
             {
-                EventManager.NotMatched();
-                shapeObjects.Clear();
+                NotMatched();
             }
         }
+    }
+
+    void Matched()
+    {
+        EventManager.ShapePoint(totalScore * amountOfObjectsToMatch);
+        for (int i = 0; i < shapeObjects.Count; i++)
+        {
+            shapeObjects[i].gameObject.SetActive(false);
+        }
+        shapeObjects.Clear();
+    }
+
+    void NotMatched()
+    {
+        EventManager.NotMatched();
+        shapeObjects.Clear();
     }
 
     public bool EqualityCondition()
@@ -67,18 +76,10 @@ public class EqualityCheck : MonoBehaviour, IEqualityCheck
         bool isItEqual = false;
         foreach (BaseShape baseShape in shapeObjects)
         {
-            if (shapeObjects[0].shapeInfo.shapeColor == baseShape.shapeInfo.shapeColor &&
-           shapeObjects[0].shapeInfo.objectShape == baseShape.shapeInfo.objectShape)
-            {
-                isItEqual = true;
-            }
-            else
-            {
-                isItEqual = false;
-            }
+            isItEqual = shapeObjects[0].shapeInfo.shapeColor == baseShape.shapeInfo.shapeColor &&
+           shapeObjects[0].shapeInfo.objectShape == baseShape.shapeInfo.objectShape;            
         }
         return isItEqual;
     }
 
-    
 }
