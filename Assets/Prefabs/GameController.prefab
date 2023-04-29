@@ -44,3 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amountOfObjectsToMatch: 3
+  gameScriptable: {fileID: 11400000, guid: 92470996315487f4d8a849a1d33d0f86, type: 2}

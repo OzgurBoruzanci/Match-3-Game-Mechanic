@@ -109,8 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shapeInfo:
-    shapeMesh: {fileID: 0}
     shapeColor: {r: 0, g: 1, b: 0, a: 0}
     shapePoint: 5
     objectShape: 0
-  positionWhenSelected: {fileID: 11400000, guid: 2be2fa31541f0e04f9023c76570686dd, type: 2}
+  shapeScriptable: {fileID: 11400000, guid: 10ea9527131f3b74791342fd9e89ed75, type: 2}

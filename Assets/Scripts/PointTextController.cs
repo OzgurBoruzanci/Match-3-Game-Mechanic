@@ -7,7 +7,7 @@ public class PointTextController : MonoBehaviour
 {
     Text pointText;
     int shapePoint = 0;
-
+    public GameScriptable gameScriptable;
     private void OnEnable()
     {
         EventManager.ShapePoint += ShapePoint;
@@ -19,6 +19,7 @@ public class PointTextController : MonoBehaviour
     void ShapePoint(int shapePt)
     {
         shapePoint += shapePt;
+        gameScriptable.highScore += shapePt;
     }
     private void Start()
     {
@@ -26,6 +27,6 @@ public class PointTextController : MonoBehaviour
     }
     void Update()
     {
-        pointText.text = "Point : " + shapePoint;
+        pointText.text = $"Point : {shapePoint} HS : {gameScriptable.highScore}";
     }
 }

@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3577f26ab865a5c40876f28a1f88e7a1, type: 3}
-  m_Name: New Move Up
+  m_Script: {fileID: 11500000, guid: a0652718f61d18746bf74138a435f7ea, type: 3}
+  m_Name: Capsule
   m_EditorClassIdentifier: 
-  distance: 1.5
-  hight: 1
+  shapeColor: {r: 0, g: 0, b: 0, a: 0}
+  firstPosition: {x: 0, y: 0, z: 0}
+  shapePoint: 0
+  objectShape: 0

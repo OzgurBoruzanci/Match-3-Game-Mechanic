@@ -113,4 +113,4 @@ MonoBehaviour:
     shapeColor: {r: 0, g: 0, b: 1, a: 0}
     shapePoint: 15
     objectShape: 3
-  positionWhenSelected: {fileID: 11400000, guid: 2be2fa31541f0e04f9023c76570686dd, type: 2}
+  shapeScriptable: {fileID: 11400000, guid: ac22474efdb33ae48b3a70d503920cf3, type: 2}

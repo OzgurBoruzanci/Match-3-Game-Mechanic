@@ -8,7 +8,7 @@ public class EqualityCheck : MonoBehaviour, IEqualityCheck
     public int amountOfObjectsToMatch = 3;
     List<BaseShape> shapeObjects;
     int totalScore;
-
+    public GameScriptable gameScriptable;
     private void OnEnable()
     {
         EventManager.OnClick += OnClick;
@@ -23,10 +23,9 @@ public class EqualityCheck : MonoBehaviour, IEqualityCheck
         if (!shapeObjects.Contains(baseShape))
         {
             shapeObjects.Add(baseShape);
-            totalScore = baseShape.shapeInfo.shapePoint;
+            totalScore = baseShape.shapeScriptable.shapePoint;
         }
         ShapeEqualityCheck();
-
     }
     private void Start()
     {
@@ -68,7 +67,9 @@ public class EqualityCheck : MonoBehaviour, IEqualityCheck
     void NotMatched()
     {
         EventManager.NotMatched();
+        EventManager.HealthDecreased();
         shapeObjects.Clear();
+
     }
 
     public bool EqualityCondition()

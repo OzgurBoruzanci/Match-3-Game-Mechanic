@@ -11,9 +11,8 @@ public class BaseShape : MonoBehaviour
 
     bool clicked = false;
     Vector3 firstPosition;
+    public ShapeScriptableOnject shapeScriptable;
 
-    [SerializeField]
-    PositionWhenSelected positionWhenSelected;
     private void OnEnable()
     {
         EventManager.NotMatched += NotMatched;
@@ -25,7 +24,7 @@ public class BaseShape : MonoBehaviour
     
     void NotMatched()
     {
-        transform.position=firstPosition;
+        transform.position= firstPosition;
         clicked = false;
     }
 
@@ -35,12 +34,11 @@ public class BaseShape : MonoBehaviour
         transform.GetComponent<Renderer>().material.color = shapeInfo.shapeColor;
     }
 
-
     private void OnMouseDown()
     {
         if (!clicked)
         {
-            positionWhenSelected.PositionOnClicked(transform.GetComponent<BaseShape>());
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 2);
             clicked = true;
             EventManager.OnClick(transform.GetComponent<BaseShape>());
         }
@@ -57,9 +55,6 @@ public class BaseShape : MonoBehaviour
 public struct ShapeInfo
 {
     public Color shapeColor;
-    
-    public int shapePoint;
-
     public enum ObjectShape { Cube, Cylinder, Sphere, Capsule };
     public ObjectShape objectShape;
 }
