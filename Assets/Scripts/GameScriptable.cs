@@ -7,5 +7,5 @@ public class GameScriptable : ScriptableObject
 {
     public int healt;
     public int remainingHealth;
-    public int highScore;
+    public int totalScore;
 }

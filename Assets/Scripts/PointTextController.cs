@@ -19,7 +19,7 @@ public class PointTextController : MonoBehaviour
     void ShapePoint(int shapePt)
     {
         shapePoint += shapePt;
-        gameScriptable.highScore += shapePt;
+        gameScriptable.totalScore += shapePt;
     }
     private void Start()
     {
@@ -27,6 +27,6 @@ public class PointTextController : MonoBehaviour
     }
     void Update()
     {
-        pointText.text = $"Point : {shapePoint} HS : {gameScriptable.highScore}";
+        pointText.text = $"Point : {shapePoint} TS : {gameScriptable.totalScore}";
     }
 }

@@ -12,7 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0652718f61d18746bf74138a435f7ea, type: 3}
   m_Name: Capsule
   m_EditorClassIdentifier: 
-  shapeColor: {r: 0, g: 0, b: 0, a: 0}
-  firstPosition: {x: 0, y: 0, z: 0}
-  shapePoint: 0
-  objectShape: 0
+  shapePoint: 15

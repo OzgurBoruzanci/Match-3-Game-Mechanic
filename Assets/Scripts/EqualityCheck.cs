@@ -54,7 +54,7 @@ public class EqualityCheck : MonoBehaviour, IEqualityCheck
         }
     }
 
-    void Matched()
+    public void Matched()
     {
         EventManager.ShapePoint(totalScore * amountOfObjectsToMatch);
         for (int i = 0; i < shapeObjects.Count; i++)
@@ -64,7 +64,7 @@ public class EqualityCheck : MonoBehaviour, IEqualityCheck
         shapeObjects.Clear();
     }
 
-    void NotMatched()
+    public void NotMatched()
     {
         EventManager.NotMatched();
         EventManager.HealthDecreased();

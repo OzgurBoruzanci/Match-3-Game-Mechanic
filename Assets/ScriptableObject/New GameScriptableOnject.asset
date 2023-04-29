@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77cf43d1d6beff24d96ea2ec46c9277b, type: 3}
   m_Name: New GameScriptableOnject
   m_EditorClassIdentifier: 
-  healt: 0
-  remainingHealth: 0
-  highScore: 0
+  healt: 10
+  remainingHealth: 10
+  totalScore: 90

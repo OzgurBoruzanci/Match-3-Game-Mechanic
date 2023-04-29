@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using System;
 
-public class BaseShape : MonoBehaviour
+public class BaseShape : MonoBehaviour,IClickable
 {
     public ShapeInfo shapeInfo;
 
@@ -34,7 +34,12 @@ public class BaseShape : MonoBehaviour
         transform.GetComponent<Renderer>().material.color = shapeInfo.shapeColor;
     }
 
-    private void OnMouseDown()
+    //private void OnMouseDown()
+    //{
+    //    Click();
+    //}
+
+    public void Click()
     {
         if (!clicked)
         {
@@ -48,7 +53,6 @@ public class BaseShape : MonoBehaviour
             clicked = false;
         }
     }
-
 }
 
 [Serializable]
