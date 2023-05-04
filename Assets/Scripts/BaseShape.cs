@@ -43,7 +43,7 @@ public class BaseShape : MonoBehaviour,IClickable
     {
         if (!clicked)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 2);
+            transform.position = new Vector3(transform.position.x, transform.position.y-0.25f, transform.position.z - 3);
             clicked = true;
             EventManager.OnClick(transform.GetComponent<BaseShape>());
         }
